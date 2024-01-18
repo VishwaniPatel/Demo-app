@@ -1,10 +1,10 @@
-import React from 'react'
-import "./Header.css"
-import Logo from '../Logo/Logo'
+import React from "react";
+import "./Header.css";
+import Logo from "../Logo/Logo";
 const Header = () => {
   return (
     <div className="header">
-      <div className="logo">
+      <div>
         {/* Display logo using Logo component */}
         <Logo />
       </div>
@@ -17,7 +17,7 @@ const Header = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,61 +1,103 @@
 .card {
-    width: 240px;
-    height: 255px;
-    border: 1px solid #c9c9c97d;
-    padding: 10px;
-    margin: 10px;
-    font-size: 0.75rem;
-    background-color: #ffffff !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 0.5rem;
-    overflow: hidden;
-    border-radius: 16px;
-  }
-  .card:hover {
-    border-color: rgb(232, 232, 232);
-    box-shadow: rgba(28, 28, 28, 0.12) 0px 0.4rem 1.8rem;
-  
-    transition: all 0.3s ease-in;
-  }
-  
-  .card > img {
+  border: 1px solid #c9c9c97d;
+  padding: 0 0 10px 0;
+  /* height: 245px; */
+  font-size: 0.75rem;
+  background-color: #ffffff !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.5rem;
+  overflow: hidden;
+  border-radius: 16px;
+  position: relative;
+}
+.card-wrapper {
+  width: 25%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+.card:hover {
+  border-color: rgb(232, 232, 232);
+  box-shadow: rgba(28, 28, 28, 0.12) 0px 0.4rem 1.8rem;
+
+  transition: all 0.3s ease-in;
+}
+.location {
+  display: block;
+}
+.img-wrapper {
+  overflow: hidden;
+  height: 170px;
+  img {
+    height: 100%;
     width: 100%;
+    object-fit: cover;
   }
-  
-  .resName {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: rgb(44, 44, 44);
-    margin-bottom: 6px;
-  }
-  
-  .res-name p {
-    color: #868383;
-    height: 20px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-  }
-  .resInfo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .ratings {
-    color: white;
-    padding: 3px 5px;
-    font-size: 0.7rem;
-  }
-  .green {
-    background-color: green;
-  }
-  .yellow {
-    background-color: #e68c47;
-  }
-  .red {
-    background-color: red;
-  }
+}
+
+/* .cardImg {
+  /* width: 100%; */
+/* max-height: 100%; */
+/* overflow: hidden; */
+/* } */
+*/ .resName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgb(44, 44, 44);
+  margin-bottom: 6px;
+}
+
+.res-name p {
+  color: #868383;
+  height: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.resInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ratings {
+  padding: 3px 5px;
+  font-size: 0.7rem;
+}
+.green {
+  background-color: green;
+}
+.yellow {
+  background-color: #e68c47;
+}
+.red {
+  background-color: red;
+}
+/* .card {
+  position: relative;
+  overflow: hidden;
+} */
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+.card:hover .modal {
+  visibility: visible;
+  opacity: 1;
+}
