@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    justify-content: between;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+}
+.logo{
+    height: 40px;
+    width: 40px;
+}
+ul, li{
+    list-style: none;
+}
+.menu{
+    display: flex;
+}
