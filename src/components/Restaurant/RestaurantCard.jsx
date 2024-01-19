@@ -1,26 +1,21 @@
 import React, { useState } from "react";
 import "./RestaurantCard.css";
-
+import { IMG_CDN_URL } from "../../environment";
 import RestaurantInfo from "./RestaurantInfo";
 const RestaurantCard = ({ cardData }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   console.log(cardData);
-  let IMG_CDN_URL =
-    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-
-  
- 
 
   const handleToggleHover = () => {
     // Toggle the state on hover
-    setIsExpanded(!isExpanded);
+    setIsVisible(!isVisible);
   };
 
   return (
     // Display restaurant card
     <div className="card-wrapper">
       <div
-        className={`card ${isExpanded ? "expanded" : ""}`}
+        className="card"
         key={cardData.id}
         onMouseEnter={handleToggleHover}
         onMouseLeave={handleToggleHover}
@@ -31,10 +26,7 @@ const RestaurantCard = ({ cardData }) => {
         <div className="res-name">
           <h5 className="resName">{cardData.info.name}</h5>
         </div>
-        {isExpanded && (
-         <RestaurantInfo cardData={cardData}></RestaurantInfo>
- 
-        )}
+        {isVisible && <RestaurantInfo cardData={cardData}></RestaurantInfo>}
       </div>
     </div>
   );
