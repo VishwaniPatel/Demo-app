@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FETCH_RESTAURANTS } from "../../environment";
-import RestaurantList from "../RestaurantList";
+import RestaurantList from "../Restaurant/RestaurantList";
+import RestaurantCard from "../Restaurant/RestaurantCard";
 const Main = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
   useEffect(() => {
@@ -21,7 +22,12 @@ const Main = () => {
   }
   return (
     <div>
-      <RestaurantList restaurants={allRestaurants} />
+      {/* <RestaurantList restaurants={allRestaurants} /> */}
+      <RestaurantList>
+        {allRestaurants.map((data,index) => (
+          <RestaurantCard key={index} cardData={data} />
+        ))}
+      </RestaurantList>
     </div>
   );
 };

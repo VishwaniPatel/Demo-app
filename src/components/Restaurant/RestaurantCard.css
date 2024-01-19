@@ -23,9 +23,6 @@
 
   transition: all 0.3s ease-in;
 }
-.location {
-  display: block;
-}
 .img-wrapper {
   overflow: hidden;
   height: 170px;
@@ -56,16 +53,7 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-.resInfo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
-.ratings {
-  padding: 3px 5px;
-  font-size: 0.7rem;
-}
 .green {
   background-color: green;
 }
@@ -80,22 +68,7 @@
   overflow: hidden;
 } */
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
-  width: 100%;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.3s ease-in-out;
-}
+
 
 .card:hover .modal {
   visibility: visible;
