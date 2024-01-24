@@ -4,7 +4,7 @@ import { IconPointFilled, IconStar } from "@tabler/icons-react";
 const RestaurantInfo = ({ cardData }) => {
   // Check average rating type
   let ratingType;
-  if (cardData.info.avgRating >= 4.0) {
+  if (cardData.info.avgRating >= 4.3) {
     ratingType = "green";
   } else if (cardData.info.avgRating < 4.0 && cardData.info.avgRating > 3.0) {
     ratingType = "yellow";

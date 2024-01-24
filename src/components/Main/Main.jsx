@@ -23,11 +23,11 @@ const Main = () => {
   return (
     <div>
       <RestaurantList restaurants={allRestaurants} />
-      {/* <RestaurantList>
+      <RestaurantList>
         {allRestaurants.map((data, index) => (
           <RestaurantCard key={index} cardData={data} />
         ))}
-      </RestaurantList> */}
+      </RestaurantList>
     </div>
   );
 };

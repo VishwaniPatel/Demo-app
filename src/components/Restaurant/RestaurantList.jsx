@@ -14,7 +14,7 @@ const RestaurantList = ({ restaurants }) => {
 };
 
 export default RestaurantList;
-// const RestaurantList = ({ children }) => {
-//     return <div className="restaurantLists">{children}</div>;
-//   };
-//   export default RestaurantList;
+const RestaurantList = ({ children }) => {
+    return <div className="restaurantLists">{children}</div>;
+  };
+  export default RestaurantList;
